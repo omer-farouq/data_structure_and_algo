@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Navigaiton Bar</title>
+    <style>
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            
+            list-style: none;
+            margin: 0;
+            background: #e74c3c;
+        }
+        .container a{
+            color: #eee;
+            text-decoration: none;
+            display: block;
+            padding: 1em; 
+        }
+        .container a:hover{
+            background: #db301e ;
+        }
+
+        @media all and (max-width: 800px){
+            .container
+            {
+                justify-content: space-around;
+            }
+        }
+        @media all and (max-width: 600px){
+            .container{
+                flex-flow: column wrap;
+                padding: 0;
+            }
+        
+        .container a {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        }
+    }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">LIGESTYLE</a></li>
+        <li><a href="#">TECHNOLOGY</a></li>
+        <li><a href="#">BLOGGING</a></li>
+        <li><a href="#">REPORT</a></li>
+        <li><a href="#">RELATION</a></li>
+        <li><a href="#">HUMAN RLATIONS</a> </li>
+    </ul>
+
+
+    <script>
+        class Stack {
+            constructor(){
+                this.stack = [];
+            }
+            add(item){
+                this.stack.push(item);
+            }
+            remove(item){
+                if(this.stack.length){
+                   return this.stack.pop(item);
+                }
+            }
+        }
+
+        const guest = new Stack();
+        guest.add('Abdurl');
+        guest.add('Zaman');
+        guest.add('Kaman');
+        guest.add('Kamran');
+        console.log(guest);
+    </script>
+</body>
+</html>

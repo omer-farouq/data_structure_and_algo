@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Data Structure</title>
+</head>
+<body>
+    <script>
+   //Last in First out. 
+        const friends = [];
+        friends.push(45);
+        friends.push(85);
+        friends.push(123);
+        console.log(friends);
+        const getOne = friends.pop();
+        console.log(getOne);
+
+        // class Stack{
+        //     constructor(){
+        //         this.stack = [];
+        //     }
+        //     add(item){
+        //         this.stack.push(item);
+        //     }
+        //     remove(){
+        //         if(this.stack.length){
+        //             return this.stack.pop();
+        //         }
+                
+        //     }
+        // }
+
+        // const guest = new Stack();
+        // guest.add('Abdur');
+        // guest.add('Zaman');
+        // guest.add("amran");
+        // guest.add('alif');
+
+        // console.log(guest.stack);
+
+        // const speaker = guest.remove();
+        // console.log(speaker);
+
+
+     
+
+
+        //practive one
+        class Stack{
+            constructor (){
+                this.stack = [];
+            }
+            add(item){
+                this.stack.push(item);
+            }
+            remove(item){
+                if(this.stack.length){
+                    return this.stack.pop();
+                }
+            }
+        }
+
+        var busArSerial = new Stack();
+        busArSerial.add('Zaman');
+        
+        busArSerial.add('Aman');
+        busArSerial.add('Omer');
+        busArSerial.add('Arman');
+        console.log(busArSerial.stack);
+
+        var passangers = busArSerial.remove();
+        console.log(passangers);
+        console.log(busArSerial.stack);
+    </script>
+    
+<script src="queue.js"></script>
+
+
+
+</body>
+</html>
